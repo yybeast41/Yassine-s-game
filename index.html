@@ -5,10 +5,12 @@
 
 <h1>This game was made by Yassine Rahi with c# and html</h1>
 
-<audio src="mobamba.mp4" controls>
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cdJNvGUc3Ng" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   <style>
-
+iframe{
+  margin:50px;
+  background-color:red;
+}
 h1{
   color:white;
   text-align: center;
@@ -20,7 +22,7 @@ h1{
     margin: 0;
   }
   body {
-    background: black;
+    background:red;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,8 +41,8 @@ var grid = 16;
 var count = 0;
 
 var snake = {
-  x: 160,
-  y: 160,
+  x: 300,
+  y: 300,
 
   // snake velocity. moves one grid length every frame in either the x or y direction
   dx: grid,
@@ -95,7 +97,7 @@ function loop() {
     snake.cells.pop();
   }
   // draw apple
-  context.fillStyle = 'red';
+  context.fillStyle = 'yellow';
   context.fillRect(apple.x, apple.y, grid-1, grid-1);
   // draw snake one cell at a time
   context.fillStyle = 'green';
